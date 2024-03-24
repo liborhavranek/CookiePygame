@@ -110,3 +110,27 @@ class Cracker(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+
+class SuperCake(Business):
+    def __init__(self):
+        super().__init__("SuperCake", 25000000, 5000, 5)
+
+    def buy_button(self, cookies_count):
+        if self.count == 0 and cookies_count >= self.base_price:
+            cookies_count -= self.base_price
+            self.count += 1
+        elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
+            cookies_count -= self.base_price * self.multiplier * self.count
+            self.count += 1
+
+class GoldCake(Business):
+    def __init__(self):
+        super().__init__("GoldCake", 100000000, 25000, 6)
+
+    def buy_button(self, cookies_count):
+        if self.count == 0 and cookies_count >= self.base_price:
+            cookies_count -= self.base_price
+            self.count += 1
+        elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
+            cookies_count -= self.base_price * self.multiplier * self.count
+            self.count += 1

@@ -2,7 +2,7 @@ import pygame
 from classes.cookie_click import CookieClick
 from classes.upgrade_cookie_click import UpgradeCookieClick
 from classes.autoclick import Autoclick
-from classes.business import Grandma, Owen, Kiln, Bakery, Sweet_shop, Donut, Cake, Cracker
+from classes.business import Grandma, Owen, Kiln, Bakery, Sweet_shop, Donut, Cake, Cracker, SuperCake, GoldCake
 
 
 pygame.init()
@@ -85,9 +85,10 @@ sweet_shop = Sweet_shop()
 donut = Donut()
 cake = Cake()
 cracker = Cracker()
+super_cake = SuperCake()
+gold_cake = GoldCake()
 
-businesses = [grandma, owen, kiln, bakery, sweet_shop, donut, cake, cracker]
-
+businesses = [grandma, owen, kiln, bakery, sweet_shop, donut, cake, cracker, super_cake, gold_cake]
 
 running = True
 pygame.time.set_timer(pygame.USEREVENT + 1, 1000)
@@ -99,6 +100,9 @@ sweet_shop_button = draw_business_line(WINDOW, sweet_shop, 800, 680, 820, 1000, 
 donut_button = draw_business_line(WINDOW, donut, 800, 680, 820, 1000, 650, cookie_clicker.cookies_count)
 cake_button = draw_business_line(WINDOW, cake, 800, 680, 820, 1000, 700, cookie_clicker.cookies_count)
 cracker_button = draw_business_line(WINDOW, cracker, 800, 680, 820, 1000, 750, cookie_clicker.cookies_count)
+super_cake_button = draw_business_line(WINDOW, super_cake, 800, 680, 820, 1000, 800, cookie_clicker.cookies_count)
+gold_cake_button = draw_business_line(WINDOW, gold_cake, 800, 680, 820, 1000, 850, cookie_clicker.cookies_count)
+
 while running:
     total_cps = total_cookies_per_second(businesses)
 
@@ -131,6 +135,10 @@ while running:
 
             elif cracker_button.collidepoint(mouse_pos):
                 cracker.buy_button(cookie_clicker.cookies_count)
+            elif super_cake_button.collidepoint(mouse_pos):
+                super_cake.buy_button(cookie_clicker.cookies_count)
+            elif gold_cake_button.collidepoint(mouse_pos):
+                gold_cake.buy_button(cookie_clicker.cookies_count)
 
             elif autoclick_obj.cookie_clickable_space(WIDTH, HEIGHT, COOKIE).collidepoint(mouse_pos):
                 cookie_clicker.handle_click(mouse_pos)
@@ -141,6 +149,7 @@ while running:
 
                 if autoclick_obj.price <= cookie_clicker.cookies_count:
                     autoclick_obj.handle_buy(cookie_clicker, WIDTH, HEIGHT, COOKIE)
+
 
         elif event.type == pygame.USEREVENT:
             autoclick_obj.autoclick(WIDTH, HEIGHT, COOKIE)
@@ -169,6 +178,8 @@ while running:
     draw_business_line(WINDOW, donut, 800, 680, 820, 1000, 650, cookie_clicker.cookies_count)
     draw_business_line(WINDOW, cake, 800, 680, 820, 1000, 700, cookie_clicker.cookies_count)
     draw_business_line(WINDOW, cracker, 800, 680, 820, 1000, 750, cookie_clicker.cookies_count)
+    draw_business_line(WINDOW, super_cake, 800, 680, 820, 1000, 800, cookie_clicker.cookies_count)
+    draw_business_line(WINDOW, gold_cake, 800, 680, 820, 1000, 850, cookie_clicker.cookies_count)
 
     autoclick_obj.draw_button(WINDOW, cookie_clicker.cookies_count, WIDTH, HEIGHT, button_font, BLACK, PINK, RED)
     upgrade_cookie_click.draw_button(WINDOW, cookie_clicker.cookies_count)
