@@ -113,32 +113,25 @@ while running:
             mouse_pos = pygame.mouse.get_pos()
 
             if grandma_button.collidepoint(mouse_pos):
-                grandma.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = grandma.buy_button(cookie_clicker.cookies_count)
             elif owen_button.collidepoint(mouse_pos):
-                owen.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = owen.buy_button(cookie_clicker.cookies_count)
             elif kiln_button.collidepoint(mouse_pos):
-                kiln.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = kiln.buy_button(cookie_clicker.cookies_count)
             elif bakery_button.collidepoint(mouse_pos):
-                bakery.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = bakery.buy_button(cookie_clicker.cookies_count)
             elif sweet_shop_button.collidepoint(mouse_pos):
-                sweet_shop.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = sweet_shop.buy_button(cookie_clicker.cookies_count)
             elif donut_button.collidepoint(mouse_pos):
-                donut.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = donut.buy_button(cookie_clicker.cookies_count)
             elif cake_button.collidepoint(mouse_pos):
-                cake.buy_button(cookie_clicker.cookies_count)
-
+                cookie_clicker.cookies_count = cake.buy_button(cookie_clicker.cookies_count)
             elif cracker_button.collidepoint(mouse_pos):
-                cracker.buy_button(cookie_clicker.cookies_count)
+                cookie_clicker.cookies_count = cracker.buy_button(cookie_clicker.cookies_count)
             elif super_cake_button.collidepoint(mouse_pos):
-                super_cake.buy_button(cookie_clicker.cookies_count)
+                cookie_clicker.cookies_count = super_cake.buy_button(cookie_clicker.cookies_count)
             elif gold_cake_button.collidepoint(mouse_pos):
-                gold_cake.buy_button(cookie_clicker.cookies_count)
+                cookie_clicker.cookies_count = gold_cake.buy_button(cookie_clicker.cookies_count)
 
             elif autoclick_obj.cookie_clickable_space(WIDTH, HEIGHT, COOKIE).collidepoint(mouse_pos):
                 cookie_clicker.handle_click(mouse_pos)
@@ -150,14 +143,12 @@ while running:
                 if autoclick_obj.price <= cookie_clicker.cookies_count:
                     autoclick_obj.handle_buy(cookie_clicker, WIDTH, HEIGHT, COOKIE)
 
-
         elif event.type == pygame.USEREVENT:
             autoclick_obj.autoclick(WIDTH, HEIGHT, COOKIE)
 
         elif event.type == pygame.USEREVENT +1:
             cookie_clicker.cookies_count += total_cps
             text = font.render(f"COOKIES {cookie_clicker.cookies_count}", True, BLACK)
-
 
     text = font.render(f"COOKIES {cookie_clicker.cookies_count}", True, BLACK)
     cps_text = font.render(f"CPS {total_cps}", True, BLACK)

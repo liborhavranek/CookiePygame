@@ -21,6 +21,7 @@ class Grandma(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Owen(Business):
@@ -34,6 +35,7 @@ class Owen(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Kiln(Business):
@@ -47,6 +49,7 @@ class Kiln(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Bakery(Business):
@@ -60,6 +63,7 @@ class Bakery(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class SweetShop(Business):
@@ -73,6 +77,7 @@ class SweetShop(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Donut(Business):
@@ -86,6 +91,7 @@ class Donut(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Cake(Business):
@@ -99,6 +105,7 @@ class Cake(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class Cracker(Business):
@@ -112,6 +119,7 @@ class Cracker(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class SuperCake(Business):
@@ -125,6 +133,7 @@ class SuperCake(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count
 
 
 class GoldCake(Business):
@@ -138,3 +147,4 @@ class GoldCake(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+        return cookies_count

@@ -5,7 +5,7 @@ class CookieClick:
     def __init__(self, font):
         self.cookies_count = 0
         self.cookies_per_click_multipler = 1
-        self.cookies_per_click = 1 * self.cookies_per_click_multipler
+        self.cookies_per_click = 8000 * self.cookies_per_click_multipler
         self.active_texts = []
         self.font = font
 
