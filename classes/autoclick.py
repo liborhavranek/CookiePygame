@@ -11,7 +11,7 @@ class Autoclick:
     def __init__(self, click_speed, click_function, price):
         self.click_speed = click_speed
         self.click_function = click_function
-        self.autoclick_speed = 5000  # Default click speed
+        self.autoclick_speed = 5000
         self.price = price
 
     def cookie_clickable_space(self, WIDTH, HEIGHT, COOKIE):
@@ -39,11 +39,11 @@ class Autoclick:
         autoclick_price_text = button_font.render(f"{self.price} cookies", True, BLACK)
         WINDOW.blit(autoclick_price_text, (400, 660))
 
-    def handle_buy(self, cookie_clicker, WIDTH, HEIGHT, COOKIE):  # Přidány parametry
+    def handle_buy(self, cookie_clicker, WIDTH, HEIGHT, COOKIE):
         if cookie_clicker.cookies_count >= self.price:
             cookie_clicker.cookies_count -= self.price
-            Autoclick.autoclick_count += 1  # Přístup k proměnné přes třídu
-            autoclick_speed = 5000 // (2 * Autoclick.autoclick_count)  # Přístup k proměnné přes třídu
+            Autoclick.autoclick_count += 1
+            autoclick_speed = 5000 // (2 * Autoclick.autoclick_count)
             self.click_speed = autoclick_speed
             self.price *= 5
             self.autoclick(WIDTH, HEIGHT, COOKIE)

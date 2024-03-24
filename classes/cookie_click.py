@@ -1,5 +1,6 @@
 import pygame
 
+
 class CookieClick:
     def __init__(self, font):
         self.cookies_count = 0
@@ -31,5 +32,3 @@ class CookieClick:
     def handle_click(self, mouse_pos):
         self.cookies_count += self.cookies_per_click
         self.add_active_text(mouse_pos[0], mouse_pos[1])
-
-

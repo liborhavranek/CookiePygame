@@ -21,6 +21,8 @@ class Grandma(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+
+
 class Owen(Business):
     def __init__(self):
         super().__init__("Trouba", 500, 5, 2)
@@ -60,7 +62,7 @@ class Bakery(Business):
             self.count += 1
 
 
-class Sweet_shop(Business):
+class SweetShop(Business):
     def __init__(self):
         super().__init__("Cukrárna", 50000, 100, 3)
 
@@ -111,6 +113,7 @@ class Cracker(Business):
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
 
+
 class SuperCake(Business):
     def __init__(self):
         super().__init__("SuperCake", 25000000, 5000, 5)
@@ -122,6 +125,7 @@ class SuperCake(Business):
         elif self.count > 0 and cookies_count >= self.base_price * self.count * self.multiplier:
             cookies_count -= self.base_price * self.multiplier * self.count
             self.count += 1
+
 
 class GoldCake(Business):
     def __init__(self):

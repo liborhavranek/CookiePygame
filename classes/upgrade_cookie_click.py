@@ -31,11 +31,11 @@ class UpgradeCookieClick:
     def draw_button(self, WINDOW, cookies_count):
         if not self.is_maxed_out() and cookies_count >= self.click_button_price:
             pygame.draw.rect(WINDOW, self.PINK, self.click_button)
-            pygame.draw.rect(WINDOW, self.BLACK, self.click_button, 3)  # Ohraničení
+            pygame.draw.rect(WINDOW, self.BLACK, self.click_button, 3)
             WINDOW.blit(self.click_button_text, (220, 610))
         else:
             pygame.draw.rect(WINDOW, self.RED, self.click_button)
-            pygame.draw.rect(WINDOW, self.BLACK, self.click_button, 3)  # Ohraničení
+            pygame.draw.rect(WINDOW, self.BLACK, self.click_button, 3)
             if self.click_button_active:
                 text = self.button_font.render("Click x2", True, self.BLACK)
             else:

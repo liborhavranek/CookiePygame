@@ -2,7 +2,7 @@ import pygame
 from classes.cookie_click import CookieClick
 from classes.upgrade_cookie_click import UpgradeCookieClick
 from classes.autoclick import Autoclick
-from classes.business import Grandma, Owen, Kiln, Bakery, Sweet_shop, Donut, Cake, Cracker, SuperCake, GoldCake
+from classes.business import Grandma, Owen, Kiln, Bakery, SweetShop, Donut, Cake, Cracker, SuperCake, GoldCake
 
 
 pygame.init()
@@ -81,7 +81,7 @@ grandma = Grandma()
 owen = Owen()
 kiln = Kiln()
 bakery = Bakery()
-sweet_shop = Sweet_shop()
+sweet_shop = SweetShop()
 donut = Donut()
 cake = Cake()
 cracker = Cracker()
